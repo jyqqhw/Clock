@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <!-- 闹钟图标 -->
+
+    <Button
+        android:id="@+id/list_alarm_logo"
+        android:layout_width="wrap_content"
+        android:layout_margin="25dp"
+
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:background="@drawable/ic_alarm_disabled" />
+    <!-- 中间层 -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="100"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/list_alarm_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="时间" />
+
+            <TextView
+                android:id="@+id/list_alarm_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginLeft="20dp"
+                android:text="备忘" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_alarm_rate"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:textSize="24sp"
+            android:layout_weight="30"
+            android:text="频率" />
+    </LinearLayout>
+    <!-- 开关图标和删除 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+
+        <ToggleButton
+            android:id="@+id/list_alarm_switch" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_switch"
+            android:layout_marginRight="10dp"
+            android:textOn=""
+            android:textOff=""
+            android:checked="false"/>
+
+        <Button
+            android:id="@+id/list_alarm_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_delete_alarm" />
+    </LinearLayout>
+
+</LinearLayout>

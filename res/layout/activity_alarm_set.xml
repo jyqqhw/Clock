@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/nav_bar_bk"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="编辑闹钟"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+    </LinearLayout>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:gravity="center"
+    android:orientation="vertical">
+    <!--TimePicker
+        android:id="@+id/alarm_timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /-->
+    <include 
+        android:id="@+id/tpv_timePicker"
+        layout="@layout/tpv_time_pick_view"
+        android:layout_width="450dp"
+        android:layout_height="300dp"/>
+</LinearLayout>
+<!-- 华丽丽的分割线 -->
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"/>
+    <!-- 闹钟名 -->
+
+    <LinearLayout
+        android:background="#e8e8e8"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="闹钟名:"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/edit_alarm_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="闹钟"
+            android:layout_marginRight="20dp"
+            android:textSize="30sp" />
+    </LinearLayout>
+    <!-- 华丽丽的分割线 -->
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"/>
+    
+    <!-- 贪睡时间 -->
+
+    <LinearLayout
+        android:background="#e8e8e8"
+        android:gravity="center_vertical"
+        android:id="@+id/alarm_lazy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_marginLeft="20dp"
+            
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="延缓(贪睡)时间"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5分钟"
+            android:id="@+id/alarm_lazy_set"
+            android:textColor="#7777cc"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/alarm_lazy_arrow"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="20dp"
+            
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_arrow" />
+    </LinearLayout>
+<!-- 华丽丽的分割线 -->
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"/>
+    <!-- 周期 -->
+
+    <LinearLayout
+        android:background="#e8e8e8"
+        android:id="@+id/alarm_period"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:layout_weight="100"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="周期"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/alarm_period_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仅一次"
+            android:textColor="#7777cc"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/alarm_period_arrow"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_arrow" />
+    </LinearLayout>
+    
+    <!-- 华丽丽的分割线 -->
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"/>
+    
+    <!-- 闹钟铃声 -->
+
+    <LinearLayout
+        android:background="#e8e8e8"
+        android:id="@+id/alarm_ring"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:layout_weight="100"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="闹钟铃声"
+            android:layout_marginLeft="20dp"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="default_alarm"
+            android:id="@+id/alarm_ring_set"
+            android:textColor="#7777cc"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/alarm_ring_arrow"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_arrow" />
+    </LinearLayout>
+    
+    <!-- 华丽丽的分割线 -->
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"/>
+    
+    <!-- 取消与保存按钮 -->
+
+    <RelativeLayout
+        android:background="#607080"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:background="@drawable/btn_style"
+            android:id="@+id/alarm_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:textSize="30sp"
+            android:text="取消" />
+
+        <Button
+            android:background="@drawable/btn_style"
+            android:id="@+id/alarm_save"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="保存" />
+    </RelativeLayout>
+
+</LinearLayout>
